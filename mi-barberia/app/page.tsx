@@ -81,7 +81,7 @@ export default function Home() {
          <div className="py-12 text-center px-4">
             <h4 className="text-xl font-bold text-pink-500 mb-4">Visítanos</h4>
             <p className="text-2xl font-bold text-neutral-800 mb-2 flex justify-center items-center gap-2">
-               <span>📞</span> +51 988975065
+               <span>📞</span> +56 983169769
             </p>
             <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">
                Estamos Ubicados en av. manuel rodrgiuez sur 881
