@@ -84,7 +84,7 @@ export default function Home() {
                <span>📞</span> +51 988975065
             </p>
             <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">
-               Estamos Ubicados en Calle La Mar #351, Monsefú
+               Estamos Ubicados en av. manuel rodrgiuez sur 881
             </p>
          </div>
       </footer>
