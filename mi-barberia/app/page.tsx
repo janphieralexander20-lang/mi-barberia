@@ -56,10 +56,37 @@ export default function Home() {
          </div>
       </section>
 
-      <footer className="mt-12 py-12 text-center bg-neutral-50 border-t border-pink-100 px-4">
-         <h4 className="text-xl font-bold text-pink-500 mb-4">Contactanos</h4>
-         <p className="text-2xl font-bold text-neutral-800 mb-2 flex justify-center items-center gap-2"><span>📞</span> +56 983169769</p>
-         <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">Estamos Ubicados en Av. Manuel Rodriguez Sur 881, santiago centro</p>
+{/* --- FOOTER CON MAPA --- */}
+      <footer className="mt-12 bg-neutral-50 border-t border-pink-100">
+         
+         {/* Sección del Mapa (Ancho completo) */}
+         <div className="w-full h-64 md:h-80 grayscale hover:grayscale-0 transition duration-700">
+            {/* Pega aquí abajo el código <iframe...> que copiaste de Google Maps.
+               Asegúrate de agregarle className="w-full h-full border-0" dentro del iframe.
+            */}
+            
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.611620722855!2d-70.66267322458447!3d-33.43336849663702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5b0fcee4a11%3A0x89974294374748d9!2sAv.%20Manuel%20Rodriguez%20Sur%20881%2C%208320000%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1764379592478!5m2!1ses-419!2scl"
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+         </div>
+
+         {/* Sección de Contacto */}
+         <div className="py-12 text-center px-4">
+            <h4 className="text-xl font-bold text-pink-500 mb-4">Visítanos</h4>
+            <p className="text-2xl font-bold text-neutral-800 mb-2 flex justify-center items-center gap-2">
+               <span>📞</span> +51 988975065
+            </p>
+            <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">
+               Estamos Ubicados en Calle La Mar #351, Monsefú
+            </p>
+         </div>
       </footer>
     </main>
   );

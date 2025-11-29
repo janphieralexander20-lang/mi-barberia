@@ -15,7 +15,7 @@ export default function BookingForm({ onClose }: { onClose: () => void }) {
     e.preventDefault();
     setLoading(true);
 
-    // 1. Guardar en Base de Datos (Supabase)
+    // 1. Guardar en Base de Datos
     const { error } = await supabase.from('citas').insert({
       cliente_nombre: formData.nombre,
       cliente_telefono: formData.telefono,
@@ -28,23 +28,25 @@ export default function BookingForm({ onClose }: { onClose: () => void }) {
     if (error) {
       alert("Error al reservar: " + error.message);
     } else {
-      // --- INTEGRACIÓN WHATSAPP ---
+      // --- NUEVO FORMATO DE MENSAJE "AESTHETIC" ---
       
-      // A. Formatear la fecha para que se lea bonito (Ej: 28 de noviembre, 15:30)
       const fechaBonita = new Date(formData.fecha).toLocaleString('es-ES', {
-        day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit'
+        weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit'
       });
 
-      // B. Crear el mensaje personalizado
-      const mensaje = `Hola! 👋 Soy ${formData.nombre}. Acabo de reservar en la web para un *${formData.servicio}* el día *${fechaBonita}*. ¿Me confirman?`;
+      // Usamos saltos de línea reales para que se vea ordenado en el celular
+      const mensaje = `Hola Xiomara! 🌸✨
+Soy *${formData.nombre}* y me gustaría confirmar mi reserva:
 
-      // C. Configurar tu número (Sin el signo +)
+💇‍♀️ *Servicio:* ${formData.servicio}
+📅 *Fecha:* ${fechaBonita}
+
+¡Quedo atenta a su confirmación! Muchas gracias 💕`;
+
       const numeroDueño = "56983169769"; 
       
-      // D. Crear el link mágico
+      // encodeURIComponent se encarga de convertir los espacios y saltos de línea para el link
       const linkWhatsApp = `https://wa.me/${numeroDueño}?text=${encodeURIComponent(mensaje)}`;
-
-      // E. Abrir WhatsApp y cerrar el formulario
       window.open(linkWhatsApp, '_blank');
       onClose();
     }
