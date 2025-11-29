@@ -58,8 +58,8 @@ export default function Home() {
 
       <footer className="mt-12 py-12 text-center bg-neutral-50 border-t border-pink-100 px-4">
          <h4 className="text-xl font-bold text-pink-500 mb-4">Contactanos</h4>
-         <p className="text-2xl font-bold text-neutral-800 mb-2 flex justify-center items-center gap-2"><span>📞</span> +51 988975065</p>
-         <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">Estamos Ubicados Calle La Mar #351, Monsefú</p>
+         <p className="text-2xl font-bold text-neutral-800 mb-2 flex justify-center items-center gap-2"><span>📞</span> +56 983169769</p>
+         <p className="text-neutral-600 max-w-xs mx-auto leading-relaxed">Estamos Ubicados en Av. Manuel Rodriguez Sur 881, santiago centro</p>
       </footer>
     </main>
   );
