@@ -1,8 +1,8 @@
-import React from "react"; // 1. IMPORTANTE: Agregamos esto para que no falle
-import type { Metadata } from "next"; // 2. Quitamos 'Viewport' de aquí para evitar errores de versión
+import type { Metadata } from "next";
+import { ReactNode } from "react"; // IMPORTANTE: Importación directa para evitar errores
 import "./globals.css";
 
-// Configuración de la Tarjeta para WhatsApp
+// 1. Tarjeta de WhatsApp
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
   description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   },
 };
 
-// Configuración del color rosa
-// (Quitamos el tipo ': Viewport' para que no de error si tu Next.js es antiguo)
+// 2. Color Rosa (Viewport)
 export const viewport = {
   themeColor: "#ec4899",
 };
 
+// 3. Estructura Principal
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode; // Usamos ReactNode directamente, sin "React."
 }) {
   return (
     <html lang="es">
