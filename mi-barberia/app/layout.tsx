@@ -1,20 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-// --- CONFIGURACIÓN DE LA TARJETA DE PRESENTACIÓN ---
+// 1. Configuración de la Tarjeta para WhatsApp/Facebook
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
-  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú. ¡Reserva tu cita online!",
-  
-  // Esto es lo que lee WhatsApp y Facebook
+  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
   openGraph: {
     title: "Xiomara Maricela | Salon & Spa",
     description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
-    url: "https://barberia-final-v1.vercel.app", // Tu link real
+    url: "https://barberia-final-v1.vercel.app",
     siteName: "Xiomara Maricela Spa",
     images: [
       {
-        url: "/opengraph-image.jpeg", // Asegúrate de que tu foto en 'public' se llame así
+        url: "/opengraph-image.jpeg", // Tu imagen .jpeg
         width: 1200,
         height: 630,
       },
@@ -24,6 +22,11 @@ export const metadata: Metadata = {
   },
 };
 
+// 2. Configuración del color del navegador (Barra rosa en celulares)
+export const viewport: Viewport = {
+  themeColor: "#ec4899",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,10 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        {/* Color de la barra del navegador en celulares (Rosa) */}
-        <meta name="theme-color" content="#ec4899" />
-      </head>
+      {/* Ya no ponemos <head> aquí, Next.js lo pone solo */}
       <body>
         {children}
       </body>
