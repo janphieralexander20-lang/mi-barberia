@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Xiomara Maricela Spa",
     images: [
       {
-        url: "/opengraph-image.png", // La imagen que acabas de subir
+        url: "/opengraph-image.jpeg", // Asegúrate de que tu foto en 'public' se llame así
         width: 1200,
         height: 630,
       },
