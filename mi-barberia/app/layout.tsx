@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   // Esto es lo que lee WhatsApp y Facebook
   openGraph: {
     title: "Xiomara Maricela | Salon & Spa",
-    description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú.",
+    description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
     url: "https://barberia-final-v1.vercel.app", // Tu link real
     siteName: "Xiomara Maricela Spa",
     images: [
