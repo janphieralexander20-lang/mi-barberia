@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-// 1. Configuración de la Tarjeta para WhatsApp/Facebook
+// 1. Configuración de la Tarjeta para WhatsApp
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
   description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "Xiomara Maricela Spa",
     images: [
       {
-        url: "/opengraph-image.jpeg", // Tu imagen .jpeg
+        url: "/opengraph-image.jpeg", 
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-// 2. Configuración del color del navegador (Barra rosa en celulares)
+// 2. Configuración del color rosa (ESTA ES LA FORMA CORRECTA)
 export const viewport: Viewport = {
   themeColor: "#ec4899",
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      {/* Ya no ponemos <head> aquí, Next.js lo pone solo */}
+      {/* ¡Fíjate que aquí ya NO hay <head>! */}
       <body>
         {children}
       </body>
