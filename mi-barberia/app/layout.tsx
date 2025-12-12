@@ -1,7 +1,8 @@
-import type { Metadata, Viewport } from "next";
+import React from "react"; // 1. IMPORTANTE: Agregamos esto para que no falle
+import type { Metadata } from "next"; // 2. Quitamos 'Viewport' de aquí para evitar errores de versión
 import "./globals.css";
 
-// 1. Configuración de la Tarjeta para WhatsApp
+// Configuración de la Tarjeta para WhatsApp
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
   description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Xiomara Maricela Spa",
     images: [
       {
-        url: "/opengraph-image.jpeg", 
+        url: "/opengraph-image.jpeg",
         width: 1200,
         height: 630,
       },
@@ -22,19 +23,19 @@ export const metadata: Metadata = {
   },
 };
 
-// 2. Configuración del color rosa (ESTA ES LA FORMA CORRECTA)
-export const viewport: Viewport = {
+// Configuración del color rosa
+// (Quitamos el tipo ': Viewport' para que no de error si tu Next.js es antiguo)
+export const viewport = {
   themeColor: "#ec4899",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="es">
-      {/* ¡Fíjate que aquí ya NO hay <head>! */}
       <body>
         {children}
       </body>
