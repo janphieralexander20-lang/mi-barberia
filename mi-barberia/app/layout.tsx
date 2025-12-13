@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ReactNode } from "react";  // <--- ¡ESTA ES LA LÍNEA MÁGICA QUE FALTABA!
+import React from "react"; // <--- IMPORTAMOS TODO EL PAQUETE PARA QUE NO FALLE
 import "./globals.css";
 
 // 1. Tarjeta para WhatsApp
@@ -32,7 +32,7 @@ export const viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode; // Ahora sí funcionará porque importamos ReactNode arriba
+  children: React.ReactNode; // <--- Ahora sí funciona porque "React" existe arriba
 }) {
   return (
     <html lang="es">
