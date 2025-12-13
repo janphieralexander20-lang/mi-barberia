@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { ReactNode } from "react"; // Importamos solo lo necesario
+import React from "react"; 
 import "./globals.css";
 
-// 1. Tarjeta para WhatsApp
+// Configuración de la Tarjeta y el Color (Todo junto, al estilo clásico)
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
   description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú.",
+  // --- AQUÍ PONEMOS EL COLOR AHORA ---
+  themeColor: "#ec4899",
+  // -----------------------------------
   openGraph: {
     title: "Xiomara Maricela | Salon & Spa",
     description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú.",
@@ -23,16 +26,12 @@ export const metadata: Metadata = {
   },
 };
 
-// 2. Color Rosa
-export const viewport = {
-  themeColor: "#ec4899",
-};
+// ¡YA NO PONEMOS "export const viewport" AQUÍ PORQUE TU VERSIÓN NO LO AGUANTA!
 
-// 3. Estructura Principal
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode; // <--- OJO: Aquí NO lleva "React.", solo "ReactNode"
+  children: React.ReactNode;
 }) {
   return (
     <html lang="es">
