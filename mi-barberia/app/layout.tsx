@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ReactNode } from "react"; // Traemos la pieza
+import React from "react"; // <--- IMPORTAMOS "REACT" (LA CAJA COMPLETA)
 import "./globals.css";
 
 // 1. Tarjeta para WhatsApp
@@ -32,7 +32,7 @@ export const viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode; // <--- AQUÍ ESTABA EL ERROR. Ahora dice solo "ReactNode"
+  children: React.ReactNode; // <--- AL USAR "REACT." AQUÍ, NECESITAMOS LA LÍNEA 2 EXACTA
 }) {
   return (
     <html lang="es">
