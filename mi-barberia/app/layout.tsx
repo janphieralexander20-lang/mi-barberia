@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import React from "react"; // <--- IMPORTAMOS TODO EL PAQUETE PARA QUE NO FALLE
+import { ReactNode } from "react"; // Traemos la pieza
 import "./globals.css";
 
 // 1. Tarjeta para WhatsApp
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
-  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
+  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú.",
   openGraph: {
     title: "Xiomara Maricela | Salon & Spa",
-    description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
+    description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Monsefú.",
     url: "https://barberia-final-v1.vercel.app",
     siteName: "Xiomara Maricela Spa",
     images: [
@@ -32,7 +32,7 @@ export const viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode; // <--- Ahora sí funciona porque "React" existe arriba
+  children: ReactNode; // <--- AQUÍ ESTABA EL ERROR. Ahora dice solo "ReactNode"
 }) {
   return (
     <html lang="es">
