@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { ReactNode } from "react"; // <--- ¡ESTA LÍNEA ES LA CLAVE!
+import { ReactNode } from "react";  // <--- ¡ESTA ES LA LÍNEA MÁGICA QUE FALTABA!
 import "./globals.css";
 
-// 1. Configuración de la Tarjeta para WhatsApp
+// 1. Tarjeta para WhatsApp
 export const metadata: Metadata = {
   title: "Xiomara Maricela | Salon & Spa",
-  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiagp.",
+  description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
   openGraph: {
     title: "Xiomara Maricela | Salon & Spa",
     description: "Realza tu belleza natural. Cortes, peinados, maquillaje y spa en Santiago.",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   },
 };
 
-// 2. Configuración del color rosa
+// 2. Color Rosa
 export const viewport = {
   themeColor: "#ec4899",
 };
 
-// 3. Estructura de la página
+// 3. Estructura Principal
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode; // <--- Usamos esto directamente
+  children: ReactNode; // Ahora sí funcionará porque importamos ReactNode arriba
 }) {
   return (
     <html lang="es">
